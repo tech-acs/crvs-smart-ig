@@ -4,7 +4,8 @@ Parent:   Encounter
 Title:    "Live birth profile"
 Description: "Demo Live birth profile to capture CRVS birth"
 
-* plannedEndDate 1..1 
+* plannedStartDate 0..0
+* plannedEndDate 0..1 
 * plannedEndDate ^short = "Date of occurrence"
 * plannedEndDate ^definition = "Date of the occurrence of the live birth"
 * type from  http://terminology.hl7.org/ValusSet/type-of-birth-vs (required)
@@ -18,8 +19,9 @@ Description: "Demo Live birth profile to capture CRVS birth"
 
 * location[locationOfDelivery] ^short = "Location of delivery"
 * location[locationOfDelivery] ^definition = "Location of delivery"
-* location[locationOfDelivery] 1..1 
+* location[locationOfDelivery] 0..1 
 * location[locationOfRegistration] ^short = "Location of registration"
 * location[locationOfRegistration] ^definition = "Location of registration"
-* location[locationOfRegistration] 1..1 
+* location[locationOfRegistration] 0..1 
 
+* extension contains DateOfRegistration named dateOfRegistration 0..1 
