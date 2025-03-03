@@ -1,9 +1,9 @@
-CodeSystem: TypeOfBirthCS
-Id: TypeOfBirthCS
+CodeSystem: TypeOfBirth
+Id: TypeOfBirth
 Title: "Type of brith"
 Description: "Type of birth Code System to capture type of birth"
 
-* ^url =  "http://terminology.hl7.org/CodeSystem/type-of-birth-cs"
+* ^url =  "http://terminology.hl7.org/CodeSystem/type-of-birth"
 * #single "Single"
 * #twin "Twin"
 * #triplet "Triplet"
