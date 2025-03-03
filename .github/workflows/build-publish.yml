@@ -45,7 +45,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Update the image to the latest publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
         with:
@@ -58,7 +58,7 @@ jobs:
           # Run the publisher - don't run the batch script but run the line directly
           args: java -Xms1g -Xmx8g -jar ./input-cache/publisher.jar publisher -ig .
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: "./output"
@@ -72,4 +72,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
