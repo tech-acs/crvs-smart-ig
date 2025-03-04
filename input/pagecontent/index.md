@@ -1,4 +1,12 @@
-# SmartGuideline for Digital CRVS Systems
+# Digital Principle and data Standard for CRVS Systems
+
+This implementation guideline was produced as an output of a workshop organized by the African digital CRVS Shared Asset initiative
+
+Efforts aimed at putting in place an integrated and harmonized digital Civil Registration and Vital Statistics (e-CRVS) system that will accelerate birth registration in Africa under the African e-CRVS Shared Asset (ACSA) initiative
+
+The partners include ID4Africa, the identity movement; OpenCRVS, the open source civil registration platform, and three development organizations namely UNICEF, UNECA and Vital Strategies, with each of them playing a distinct role.
+
+UNICEF, UNECA, and Vital Strategies lead the normative aspect of ACSA, delineating standards and norms for developers to adhere to, with input from other seasoned CRVS IT system implementers, sates the announcement.
 
 ## Introduction
 Civil Registration and Vital Statistics (CRVS) systems record vital events—births, deaths, marriages, and other legally recognized events—providing individuals with legal identity and governments with essential data for planning and policy-making. Digitalization enhances the efficiency, accuracy, and accessibility of these systems, aligning them with modern governance needs. This *SmartGuideline* offers a comprehensive, standardized framework for designing and implementing digital CRVS systems, balancing international best practices with national contexts.

@@ -2,9 +2,9 @@
 
 This outlines the process from event occurrence to certification
 
-![Process steps](steps.png)
+[Process steps](steps.png)
 
-# Event registration principles
+## Event registration principles
 
 - **Notifications**: 
   Providing the civil registrar with information about the occurrence of a birth or death (for example from the health sector), but the vital event cannot be registered based on this information alone; ideally processes should therefore be designed in a way that the issuance of proof of a birth or death (e.g., by the health sector) is combined with the Declaration step (see below) for that event.
@@ -31,5 +31,12 @@ This outlines the process from event occurrence to certification
 ## timely birth registration
 
 
+[Timely birth Flow Diagram](timely_birth.png)
 
-![Timely birth Flow Diagram](timely_birth.png)
+
+## Validation and data sharing
+
+CRVS system could generate a qr code that will host some or all the data related to the Civil registration, this could be printed to any certificate in order to have a scannable version of the certificate or to carry one's civil registration record across border (regional, national, .. ) 
+
+The approach defined by the the smart health card could be used to create the smart CRVS cards https://spec.smarthealth.cards/ 
+

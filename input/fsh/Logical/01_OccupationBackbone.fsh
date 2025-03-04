@@ -3,7 +3,7 @@ Id: OccupationBackbone
 Title: "Occupation Profile"
 Description: "A profile defining occupation details."
 Parent: BackboneElement
-* ^url = "http://acsa.org/fhir/StructureDefinition/OccupationBackbone"
+* ^url = "http://acsa.africa/fhir/StructureDefinition/OccupationBackbone"
 * placeOfOccupation 0..1 Address "Place of occupation"
 * employmentStatus 0..1 CodeableConcept "Employment status"
 * industry 0..1 CodeableConcept "Industry"

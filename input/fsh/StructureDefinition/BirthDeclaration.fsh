@@ -5,7 +5,7 @@ Parent: DomainResource
 Description: "A new base resource for capturing registered birth data in the CRVS realm."
 * ^kind = #resource
 * ^derivation = #specialization
-* ^url = "http://acsa.org/fhir/StructureDefinition/BirthDeclaration"
+* ^url = "http://acsa.africa/fhir/StructureDefinition/BirthDeclaration"
 * ^abstract = false
 * insert BirthNotificationSnippet
 * insert RegisteredBirthSnippet
