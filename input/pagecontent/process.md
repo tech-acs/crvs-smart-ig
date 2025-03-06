@@ -1,6 +1,6 @@
 # CRVS Process
 
-This outlines the process from event occurrence to certification
+This outlines the process from event occurrence to generating the legal and permanent record to certification
 
 [Process steps](steps.png)
 
@@ -39,4 +39,6 @@ This outlines the process from event occurrence to certification
 CRVS system could generate a qr code that will host some or all the data related to the Civil registration, this could be printed to any certificate in order to have a scannable version of the certificate or to carry one's civil registration record across border (regional, national, .. ) 
 
 The approach defined by the the smart health card could be used to create the smart CRVS cards https://spec.smarthealth.cards/ 
+
+
 

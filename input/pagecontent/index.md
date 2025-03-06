@@ -1,15 +1,13 @@
-# Digital Principle and data Standard for CRVS Systems
+# Digital Principle and Data Standard for CRVS Systems
 
-This implementation guideline was produced as an output of a workshop organized by the African digital CRVS Shared Asset initiative
+This implementation guideline was drafted following a workshop organized in Kigali in February 2025.
 
-Efforts aimed at putting in place an integrated and harmonized digital Civil Registration and Vital Statistics (e-CRVS) system that will accelerate birth registration in Africa under the African e-CRVS Shared Asset (ACSA) initiative
+The African e-CRVS Shared Asset (ACSA) initiative aims at putting in place guidance for integrated and harmonized digital Civil Registration and Vital Statistics (e-CRVS) system that will accelerate civil registration in Africa.
 
-The partners include ID4Africa, the identity movement; OpenCRVS, the open source civil registration platform, and three development organizations namely UNICEF, UNECA and Vital Strategies, with each of them playing a distinct role.
-
-UNICEF, UNECA, and Vital Strategies lead the normative aspect of ACSA, delineating standards and norms for developers to adhere to, with input from other seasoned CRVS IT system implementers, sates the announcement.
+The ACSA initiative is led by a Board of African countries with the support three development partners namely UNICEF, UNECA and Vital Strategies.
 
 ## Introduction
-Civil Registration and Vital Statistics (CRVS) systems record vital events—births, deaths, marriages, and other legally recognized events—providing individuals with legal identity and governments with essential data for planning and policy-making. Digitalization enhances the efficiency, accuracy, and accessibility of these systems, aligning them with modern governance needs. This *SmartGuideline* offers a comprehensive, standardized framework for designing and implementing digital CRVS systems, balancing international best practices with national contexts.
+Civil Registration and Vital Statistics (CRVS) systems record vital events—births, deaths, marriages, and other legally recognized events—providing individuals with legal identity and governments with essential data for planning and policy-making. Digitalization enhances the efficiency, accuracy, and accessibility of these systems, aligning them with modern governance needs. These *Design Principles and Data Standards* offers a comprehensive, standardized framework for designing and implementing digital CRVS systems, balancing international best practices with national contexts.
 
 **Purpose**: To guide stakeholders in creating inclusive, secure, and sustainable digital CRVS solutions that meet the core principles of civil registration—compulsoriness, universality, continuity and permanence, and confidentiality—while addressing functional and operational requirements.
 
@@ -17,8 +15,8 @@ Civil Registration and Vital Statistics (CRVS) systems record vital events—bir
 These principles ensure digital CRVS systems align with United Nations standards (UNSD, 2014) and address inclusivity, security, and sustainability, as emphasized in Workshop Group 1 feedback.
 
 - **Compulsory**
-  - **Legal Compliance**: Systems must adhere to national laws (e.g., ICT, privacy, data protection) and international frameworks (e.g., UN treaties), ensuring digitally issued documents are legally recognized.
-  - **Free Access**: Initial registration and certification must be free, with fees limited to additional services like duplicate certificates.
+  - **Legal Compliance**: Systems must adhere to national laws (e.g., civil registration, ICT, privacy, data protection) and international frameworks (e.g., UN treaties), ensuring digitally issued documents are legally recognized.
+  - **Free Access**: Registration and the first certificate must be free, with fees limited to additional services like duplicate certificates.
   - **Data Quality Assurance**: Embed tools to monitor timeliness (current, late, delayed), accuracy, and completeness, supporting reliable vital statistics.
 
 - **Universality**
@@ -27,7 +25,7 @@ These principles ensure digital CRVS systems align with United Nations standards
   - **User-Centric Design**: Prioritize user needs to avoid marginalization, incorporating intuitive interfaces and accessible channels.
 
 - **Continuous and Permanent**
-  - **Legal Recognition**: Digital certificates must hold legal validity under national and international law.
+  - **Legal Recognition**: (Digital) Certificates must hold legal validity under national and international law.
   - **Resilience and Continuity**: Build systems to withstand disruptions (natural or human-induced) with robust disaster recovery plans.
   - **Sustainability and Scalability**: Ensure long-term viability through cost-effective scaling and sustainable technical, financial, and administrative plans.
   - **Country Ownership and Data Sovereignty**: Governments must control systems and data, using open standards to avoid vendor lock-in.
@@ -57,12 +55,12 @@ Standards ensure consistency, security, and interoperability, harmonization and 
 [Link to Reauiremetn Page](./requirements)
 
 ## CRVS process
-This outlines the process from event occurrence to certification.
+This outlines the process from event occurrence to generating the permanent legal record of the event and to certification.
 
 - **Notifications**: Initial reports from external sources (e.g., health facilities, local authorities), contributing to but not completing registration.
 - **Declaration**: Official submission by informants, verified for accuracy.
 - **Validation**: Clerks ensure data completeness, requesting corrections if needed.
-- **Registration**: Registrars formally record the event, assigning unique IDs.
+- **Registration**: Registrars formally record the event, including assignment of a unique IDs (e.g., by the civil registry, the ID agency, the population register or any other actor in the local ID ecosystem).
 - **Certification**: Issuance of certificates as proof of registration, using special paper or digital signatures.
 
 [Link to Process Page](./process)
@@ -107,6 +105,7 @@ draft
 - **Organisation**: Identifies authorities involved in CRVS processes.
 
 ## Credits
-- **Vital Strategy**: CRVS business expertise.
-- **SwissTPH**: Implementation guide development.
-- **Workshop Participants**: reports from Groups 1 and 2.
+- **ACSA Workshop Participants**: reports from Groups 1 and 2.
+- **ACSA Partners and technical experts**: UNECA, UNICEF, Vital Strategies, Swiss TPH
+
+

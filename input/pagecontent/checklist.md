@@ -14,7 +14,7 @@
 
   - [ ] **Notification**: Ability to capture event reports from authorized sources (e.g., health centers, parents) with configurable validation rules.
   - [ ] **Declaration**: Mechanism for informants (e.g., parents, health staff) to submit official requests, verified by signature or digital means.
-  - [ ] **Registration**: Formal enrollment by registrars, generating unique IDs and ensuring quality checks.
+  - [ ] **Registration**: Formal enrollment by registrars, including generating unique IDs (as applicable by the ID system, the population register or other actor in the ID ecosystem of the country) and ensuring quality checks.
   - [ ] **Certification**: Capability to issue verifiable certificates (digital or physical) with cryptographic signatures.
   - [ ] **Unique ID Generation/integration**: System to assign or retrieve from external system randomized
 
@@ -29,7 +29,7 @@
 
 ### Implementation
 
-- [ ] **Interoperability** Integration with national ID, health, and statistics systems using harmonized data standards.
+- [ ] **Interoperability** Link to national ID, health, and statistics systems using harmonized data standards.
 - [ ] **Security and Privacy** Use of encryption, two-factor authentication (2FA), and zero-trust security models.
 - [ ] **Unique ID Generation/integration**: The system in enforcing unique ID.
 
@@ -42,6 +42,10 @@
 - [ ] **Usability**: Provision of training, intuitive design, and real-time validation to reduce errors.
 - [ ] **Maintainability**: Use of modular architecture and detailed documentation for seamless updates.
 - [ ] **Accessibility**: Meeting digital accessibility standards (e.g., WCAG) for all users.
+- [ ] **testing**: Good Unit test coverage (ideally 100%) and integration tests covering most used business actions
+- [ ] **Continuous Integration Pipeline** each code change approuved must go trhough the testing
+- [ ] **Performance and load test** performance of eachj release must be evaluated against load test involving a production size database and expected production peak traffic	
+
 
 Recording
 ### Implementation
@@ -57,8 +61,8 @@ Recording
 
 ##### Compulsory
 
-  - [ ] **Legal Compliance**: Adherence to national laws (e.g., ICT, privacy, data protection) and international frameworks.
-  - [ ] **Free Access**: Initial registration and certification must be free, with fees limited to additional services.
+  - [ ] **Legal Compliance**: Adherence to national laws (e.g., CRVS, ICT, privacy, data protection) and international frameworks.
+  - [ ] **Free Access**: Registration and first certificate must be free, with fees limited to additional services.
   - [ ] **Data Quality Assurance**: Tools to monitor timeliness, accuracy, and completeness.
 
 ##### Universality
@@ -114,3 +118,5 @@ Recording
 - [ ] **Group**: Capability to create group of user
 - [ ] **Location**: Capability geographical data for events and organizations.
 - [ ] **Organisation**: Identifying authorities involved in CRVS processes.
+
+
