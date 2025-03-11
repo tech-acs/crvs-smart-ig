@@ -9,5 +9,7 @@ Description: "A new base resource for capturing registered birth data in the CRV
 * ^abstract = false
 * insert BirthNotificationSnippet
 * insert RegisteredBirthSnippet
-* insert BirthStatisticsSnippet
+* statistic 0..1 BackboneElement "Mother's occupation details"
+* statistic only http://acsa.africa/fhir/StructureDefinition/BirthStatisticBackbone
+
 

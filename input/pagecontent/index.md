@@ -92,7 +92,6 @@ This outlines the process from event occurrence to generating the permanent lega
 - UNICEF. (2017). *Strengthening Birth Registration in Africa*. [Link](https://www.unicef.org/reports)
 - BMJ Global Health. (2018). *The ‘Ten CRVS Milestones’ Framework*. [Link](https://gh.bmj.com/content/bmjgh/3/2/e000673.full.pdf)
 
-
 ## Process Management
 draft
 

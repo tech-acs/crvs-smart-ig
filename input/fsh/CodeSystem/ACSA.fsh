@@ -31,3 +31,12 @@ Description: "Acsa main Data dictionary that defines the required concepts"
   * #triplet "Triplet"
   * #quadruplet "Quadruplet"
   * #multiple "Higher multiple"
+* #literacy
+  * #full-literacy "Full literacy"
+  * #illiterate "Cannot read or write"
+  * #partial-literacy "Partial literacy"
+* #civil-status
+  * #refugee "Refugee"
+  * #citizen "Citizen"
+  * #visiting-foreigner "Visiting foreigner"
+  * #foreigner-resident "foreigner Resident"
