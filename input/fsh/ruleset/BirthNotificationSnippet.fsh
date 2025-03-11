@@ -8,7 +8,5 @@ RuleSet: BirthNotificationSnippet
 * sex 1..1 code "Sex of the child"
 * sex from Sex (required)
 * specialMark 0..1 string "Special mark or note about the birth"
-* birthType 1..1 code "Type of birth (live or stillborn)"
-* birthType from BirthType (required)
 * weightAtBirth 0..1 Quantity "Weight at birth"
 
