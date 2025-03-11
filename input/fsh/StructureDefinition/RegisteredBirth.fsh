@@ -8,5 +8,5 @@ Description: "A new base resource for capturing registered birth data in the CRV
 * ^url = "http://acsa.africa/fhir/StructureDefinition/RegisteredBirth"
 * ^abstract = false
 * insert RegisteredBirthSnippet
-* insert BirthStatisticsSnippet
+
 

@@ -12,4 +12,3 @@ Description: "A new base resource for capturing registered birth data in the CRV
 * statistic 0..1 BackboneElement "Mother's occupation details"
 * statistic only http://acsa.africa/fhir/StructureDefinition/BirthStatisticBackbone
 
-
