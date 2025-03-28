@@ -80,8 +80,9 @@ menu:
     Principles: principles.html
     Requirements: requirements.html
     Actors: actors.html
-    Process: 
-      Timely Birth: process_timely_birth.html
+  Process:
+    concepts: process.html
+    Timely Birth: process_timely_birth.html
   Machine readable (L3):
     Artifacts: artifacts.html
   Tools and misc:
