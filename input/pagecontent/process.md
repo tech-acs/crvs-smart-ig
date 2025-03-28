@@ -28,12 +28,6 @@ This outlines the process from event occurrence to generating the legal and perm
   Archiving of physical records of the vital events.
 
 
-## timely birth registration
-
-
-[Timely birth Flow Diagram](timely_birth.png)
-
-
 ## Validation and data sharing
 
 CRVS system could generate a qr code that will host some or all the data related to the Civil registration, this could be printed to any certificate in order to have a scannable version of the certificate or to carry one's civil registration record across border (regional, national, .. ) 
@@ -41,4 +35,32 @@ CRVS system could generate a qr code that will host some or all the data related
 The approach defined by the the smart health card could be used to create the smart CRVS cards https://spec.smarthealth.cards/ 
 
 
+## Details process per CRVS Events
 
+- [Timely registration of live birth](./process_timely_birth)
+- **Late Registration of live birth** TBD
+- **Foetal Death**: TBD
+- **Death**: TBD
+- **Marriage**: TBD
+- **Ruling**: Includes:
+  - **Divorce**: TBD
+  - **Annulment**: TBD
+  - **Separation**: TBD
+  - **Adoption**: TBD
+  - **Legitimation**: TBD
+  - **Recognition**: TBD
+
+
+## Process Management
+
+To be discussed to which extent the standard might also define the resources that would used in the above process workflow 
+
+
+Here some ideas
+- **CRVS Case**: Tracks individual cases through the registration process.
+- **CRVS Task**: Assigns and monitors specific workflow steps.
+- **Person**: Identifies individuals in the system.
+- **Practitioner**: Defines user roles with authentication and authorization.
+- **Group**: Assigns tasks to teams.
+- **Location**: Records geographical data for events and organizations.
+- **Organisation**: Identifies authorities involved in CRVS processes.

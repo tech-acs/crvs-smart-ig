@@ -8,7 +8,7 @@
 ### Status
 
 
-this is a copied and adapted version of  SmartHealthCard [https://github.com/smart-on-fhir/cr-cards](https://github.com/smart-on-fhir/cr-cards)
+this is a copied and adapted version of  SmartHealthCard [https://github.com/smart-crvs/cr-cards](https://github.com/smart-crvs/cr-cards)
 
 see [change log](./changelog/).
 
@@ -21,7 +21,7 @@ Security issues can be disclosed privately by emailing `security@acsa.africa` to
 
 # Introduction
 
-This implementation guide provides a framework for "CR cards". The frameworks supports documentation of any health-related details that can be modeled with [HL7 FHIR](https://hl7.org/fhir/). This work grew out of our initial focus on enabling a consumer to receive CRVS data. Key use cases included conveying point-in-time CRVS status.
+This implementation guide provides a framework for "CR cards". The frameworks supports documentation of any health-related details that can be modeled with ACSA STD. This work grew out of our initial focus on enabling a consumer to receive CRVS data. Key use cases included conveying point-in-time CRVS status.
 
 Because we must ensure end-user privacy and because CR cards must work across organizational and jurisdictional boundaries, we build on international open standards and decentralized infrastructure.
 
@@ -55,7 +55,7 @@ We enable CR cards by defining building blocks that can be used across administr
 * **User Receives** a CR card from an Issuer. The CR card is a signed data artifact that the user can obtain through any of these methods:
     * issuer offers a CR card on paper or PDF, including a QR code (required method)
     * issuer offers a CR card for download as a `.smart-crvs-card` file (required method)
-    * issuer hosts a CR card for [API access](#crvswalletissuevc-operation) via a compatible CR Wallet application. This workflow includes a SMART on FHIR authorization step with an Issuer, where the user grants read access to any resources that will be present in CR cards (e.g., `person`, `RegisteredBirth`, `Observation`, `DiagnosticReport`)
+    * issuer hosts a CR card for [API access](#crvswalletissuevc-operation) via a compatible CR Wallet application. This workflow includes a SMART on ACSA STD authorization step with an Issuer, where the user grants read access to any resources that will be present in CR cards (e.g., `person`, `RegisteredBirth`, `Observation`, `DiagnosticReport`)
 * **User Saves** a CR card, whether on paper or digitally.
 * **User Presents** a CR card to a Verifier. Presentation includes explicit user opt-in and approval, and may involve displaying a QR code, sharing a file, or using an on-device SDK (e.g., for verifier-to-holder app-to-app communications)
 
@@ -206,11 +206,11 @@ If the `crlVersion` is present in the Issuer's JWK for key `<<kid>>`, Verifiers 
 
 Revocation of CR cards without a `rid` field (including all pre-v1.2.0 ones) can be done using external mechanisms to calculate a dynamic `rid` value based on the JWS’s content.
 
-If individual revocation of SMART CR cards is not possible, then an issuer SHOULD revoke its issuing key, and allow users to obtain new CR cards; limiting the validity period of a key helps to mitigate the adverse effects of this situation. See the [revocation FAQ](https://github.com/smart-on-fhir/cr-cards/blob/main/FAQ/revocation.md) for more details.
+If individual revocation of SMART CR cards is not possible, then an issuer SHOULD revoke its issuing key, and allow users to obtain new CR cards; limiting the validity period of a key helps to mitigate the adverse effects of this situation. See the [revocation FAQ](https://github.com/smart-crvs/cr-cards/blob/main/FAQ/revocation.md) for more details.
 
 ## Issuer Generates Results
 
-When the issuer is ready to generate a CR card, the issuer creates a FHIR payload and packs it into a corresponding CR card VC (or CR card Set).
+When the issuer is ready to generate a CR card, the issuer creates a ACSA STD payload and packs it into a corresponding CR card VC (or CR card Set).
 
 ```mermaid
 sequenceDiagram
@@ -246,11 +246,11 @@ The `type`, and `credentialSubject` properties are added to the `vc` claim of th
       "<<Additional Types>>",
     ],
     "credentialSubject": {
-      "fhirVersion": "<<FHIR Version, e.g. '4.0.1'>>",
+      "fhirVersion": "<<ACSA STD Version, e.g. '4.0.1'>>",
       "fhirBundle":{
         "resourceType": "Bundle",
         "type": "collection",
-        "entry": ["<<FHIR Resource>>", "<<FHIR Resource>>", "..."]
+        "entry": ["<<ACSA STD Resource>>", "<<ACSA STD Resource>>", "..."]
       }
     }
   }
@@ -284,7 +284,7 @@ For details about how to represent a CR card as a QR code, [see below](#cr-cards
 
 ## User Retrieves CR cards
 
-In this step, the user learns that a new CR card is available (e.g., by receiving a text message or email notification, or by an in-wallet notification for FHIR-enabled issuers.)
+In this step, the user learns that a new CR card is available (e.g., by receiving a text message or email notification, or by an in-wallet notification for acsa-std-enabled issuers.)
 
 ### via File Download
 
@@ -336,13 +336,13 @@ With proper URL encoding a link will look like:
 
 After OS-mediated redirection, the CR Wallet app can now parse each JWS and present the collection for import to the user.
 
-### via FHIR `$cr-cards-issue` Operation
+### via ACSA STD `$cr-cards-issue` Operation
 
 __FIXME__
 
-#### Discovery of FHIR Support
+#### Discovery of ACSA STD Support
 
-A SMART on FHIR Server capable of issuing VCs according to this specification SHALL advertise its support by adding the `cr-cards` capability to its `/.well-known/smart-configuration` JSON file. For example:
+A SMART on ACSA STD Server capable of issuing VCs according to this specification SHALL advertise its support by adding the `cr-cards` capability to its `/.well-known/smart-configuration` JSON file. For example:
 
 ```json
 {
@@ -358,7 +358,7 @@ A SMART on FHIR Server capable of issuing VCs according to this specification SH
 <a name="healthwalletissuevc-operation"></a>
 #### `$cr-cards-issue` Operation
 
-A CR Wallet can `POST /person/:id/$cr-cards-issue` to a FHIR-enabled issuer to request or generate a specific type of CR card. The body of the POST looks like:
+A CR Wallet can `POST /person/:id/$cr-cards-issue` to a acsa-std-enabled issuer to request or generate a specific type of CR card. The body of the POST looks like:
 
 ```json
 {
@@ -371,10 +371,9 @@ A CR Wallet can `POST /person/:id/$cr-cards-issue` to a FHIR-enabled issuer to r
 ```
 
 The `credentialType` parameter is required. This parameter restricts the request
-by high-level categories based on FHIR Resource Types such as "RegisteredBirth" or
-"RegisteredWedding". See [FHIR Resource
-Types](https://hl7.org/fhir/R4/resourcelist.html).  Type-based filters evaluate
-CR cards based on the FHIR resource types within the CR card payload at
+by high-level categories based on ACSA STD Resource Types such as "RegisteredBirth" or
+"RegisteredWedding". See  Type-based filters evaluate
+CR cards based on the ACSA STD resource types within the CR card payload at
 `.vc.credentialSubject.fhirBundle.entry[].resource`.  Multiple `credentialType`
 parameters in one request SHALL be interpreted as a request for CR cards
 that contain all of the requested types (logical AND). To maintain compatibility
@@ -387,7 +386,7 @@ and servers MAY ignore them if present.
 * **`credentialValueSet`**. Restricts the request by FHIR
 content such as "any standardized vaccine code for mpox". See [CR card
 Valuesets](https://terminology.smarthealth.cards/artifacts.html#terminology-value-sets).
-Valueset-based filters apply to the FHIR Resources within the CR card
+Valueset-based filters apply to the ACSA STD Resources within the CR card
 payload at `.vc.credentialSubject.fhirBundle.entry[].resource`.  For
 RegisteredBirths, the `RegisteredBirth.vaccineCode` is evaluated. For Observations,
 the `Observation.code` is evaluated. Multiple `credentialValueSet` parameters
@@ -422,7 +421,7 @@ from all of the supplied Valuesets (logical AND).
 }
 ```
 
-* **`_since`**. By default, the issuer will return CR cards of any age. If the CR Wallet wants to request only cards pertaining to data since a specific point in time, it can provide a `_since` parameter with a `valueDateTime` (which is an ISO8601 string at the level of a year, month, day, or specific time of day using the extended time format; see [FHIR dateTime datatype](http://hl7.org/fhir/datatypes.html#dateTime) for details). For example, to request only COVID-19 data since March 2021:
+* **`_since`**. By default, the issuer will return CR cards of any age. If the CR Wallet wants to request only cards pertaining to data since a specific point in time, it can provide a `_since` parameter with a `valueDateTime` (which is an ISO8601 string at the level of a year, month, day, or specific time of day using the extended time format; see [ACSA STD dateTime datatype](http:/acsa.afrika/fhir/datatypes.html#dateTime) for details). For example, to request only COVID-19 data since March 2021:
 
 
 ```json
@@ -459,7 +458,7 @@ If no results are available, a `Parameters` resource without any `parameter` is 
 }
 ```
 
-In the response, an optional repeating `resourceLink` parameter can capture the link between any number of hosted FHIR resources and their derived representations within the verifiable credential's `.credentialSubject.fhirBundle`, allowing the CR Wallet to explicitly understand these correspondences between `bundledResource` and `hostedResource`, without baking details about the hosted endpoint into the signed credential. The optional `vcIndex` value on a `resourceLink` can be used when a response contains more than one VC, to indicate which VC this resource link applies to. The `vcIndex` is a zero-based index of a `verifiableCredential` entry within the top-level `parameter` array.
+In the response, an optional repeating `resourceLink` parameter can capture the link between any number of hosted ACSA STD resources and their derived representations within the verifiable credential's `.credentialSubject.fhirBundle`, allowing the CR Wallet to explicitly understand these correspondences between `bundledResource` and `hostedResource`, without baking details about the hosted endpoint into the signed credential. The optional `vcIndex` value on a `resourceLink` can be used when a response contains more than one VC, to indicate which VC this resource link applies to. The `vcIndex` is a zero-based index of a `verifiableCredential` entry within the top-level `parameter` array.
 
 ```json
 {
@@ -493,21 +492,20 @@ When a wallet-specific API is used to manage this sharing workflow, the API
 SHOULD ensure that the requester can specify filters for:
 
 1. SMART CR card resource types, to restrict the request based on FHIR
-Resource Types such as "RegisteredBirth" or "Observation". See [FHIR Resource
-Types](https://hl7.org/fhir/R4/resourcelist.html).  Type-based filters evalute
-CR cards based on the FHIR resource types within the CR card payload at
+Resource Types such as "RegisteredBirth" or "Observation". See   Type-based filters evalute
+CR cards based on the ACSA STD resource types within the CR card payload at
 `.vc.credentialSubject.fhirBundle.entry[].resource`.
 
 2. SMART CR card value sets, to further restrict the request by FHIR
 content such as "any standardized vaccine code for mpox". See [CR card
 Valuesets](https://terminology.smarthealth.cards/artifacts.html#terminology-value-sets).
-Valueset-based filters apply to the FHIR Resources within the CR card
+Valueset-based filters apply to the ACSA STD Resources within the CR card
 payload at `.vc.credentialSubject.fhirBundle.entry[].resource`.  For
 RegisteredBirths, the `RegisteredBirth.vaccineCode` is evaluated. For
 Observations, the `Observation.code` is evaluated.
 
 This same filtering approach is used by the [`$cr-cards-issue`
-operation](#via-fhir-cr-cards-issue-operation), via the `credentialType`
+operation](#via-acsa-std-cr-cards-issue-operation), via the `credentialType`
 and `credentialValueSet` parameters. Over time, we will endeavor to provide
 more standardized presentation workflows for on-device and web-based exchange.
 
@@ -532,7 +530,7 @@ The following limitations apply when presenting CR card as QR codes, rather than
    
 **Deprecation note: As of December 2022, support for chunking has not been widely adopted in production SHC deployments. For SHCs that need to be presented as QRs, we recommend limiting payload size to fit in a single QR (when possible), or else considering [SMART Health Links](https://docs.smarthealthit.org/smart-health-links).**
 
-Commonly, CR cards will fit in a single V22 QR code. Any JWS longer than 1195 characters SHALL be split into "chunks" of length 1191 or smaller; each chunk SHALL be encoded as a separate QR code of V22 or lower, to ensure ease of scanning. Each chunk SHALL be numerically encoded and prefixed with an ordinal as well as the total number of chunks required to re-assemble the JWS, as described below. The [QR code FAQ page](https://github.com/smart-on-fhir/cr-cards/blob/main/FAQ/qr.md) details max JWS length restrictions at various error correction levels.
+Commonly, CR cards will fit in a single V22 QR code. Any JWS longer than 1195 characters SHALL be split into "chunks" of length 1191 or smaller; each chunk SHALL be encoded as a separate QR code of V22 or lower, to ensure ease of scanning. Each chunk SHALL be numerically encoded and prefixed with an ordinal as well as the total number of chunks required to re-assemble the JWS, as described below. The [QR code FAQ page](https://github.com/smart-crvs/cr-cards/blob/main/FAQ/qr.md) details max JWS length restrictions at various error correction levels.
 
 To ensure the best user experience when producing and consuming multiple QR codes:
 
@@ -573,7 +571,7 @@ To address use cases such as the preceding one, an optional SMART CR card expira
 
 # FAQ
 
-Technical security questions are covered in the [security FAQ page](https://github.com/smart-on-fhir/cr-cards/blob/main/FAQ/security.md).
+Technical security questions are covered in the [security FAQ page](https://github.com/smart-crvs/cr-cards/blob/main/FAQ/security.md).
 
 ## Can a SMART CR card be used as a form of identification?
 
@@ -597,17 +595,17 @@ Decision-making often results in a narrowly-scoped "Pass" that embodies conclusi
 
 The following tools are helpful to validate CR card artifacts:
 
-* The [HL7 FHIR Validator](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator) can be used to validate the CR card's FHIR bundle
-* The [CR cards Dev Tools](https://github.com/smart-on-fhir/cr-cards-dev-tools) can be used to validate the various CR card artifacts.
+* The [ACSA STD Validator](https://acsa.afrika/display/FHIR/Using+the+FHIR+Validator) can be used to validate the CR card's ACSA STD bundle
+* The [CR cards Dev Tools](https://github.com/smart-crvs/cr-cards-dev-tools) can be used to validate the various CR card artifacts.
 
 Other resources that are helpful for learning about and implementing SMART CR cards include:
 
-* The [code used to generate the examples](https://github.com/smart-on-fhir/cr-cards/tree/main/generate-examples) present in the spec.
+* The [code used to generate the examples](https://github.com/smart-crvs/cr-cards/tree/main/generate-examples) present in the spec.
 * A [Jupyter Notebook walkthrough](https://github.com/dvci/cr-cards-walkthrough/blob/main/SMART%20Health%20Cards.ipynb) and [demo portals](https://demo-portals.smarthealth.cards/) which demonstrate creating, validating and decoding a SMART CR card as a QR code.
 
 ## What software libraries are available to work with SMART CR cards?
 
-The [Libraries for SMART CR cards](https://github.com/smart-on-fhir/cr-cards/wiki/Libraries-for-SMART-cr-cards) wiki page includes suggestions about useful libraries.
+The [Libraries for SMART CR cards](https://github.com/smart-crvs/cr-cards/wiki/Libraries-for-SMART-cr-cards) wiki page includes suggestions about useful libraries.
 
 # Potential Extensions
 
@@ -617,8 +615,8 @@ The spec is currently focused on representing CR cards in a standardized data pa
 
 # References
 
-* SmartHealthCard [https://github.com/smart-on-fhir/cr-cards](https://github.com/smart-on-fhir/cr-cards)
-* Fast Health Interoperability Resources (FHIR): [https://hl7.org/fhir/](https://hl7.org/fhir/)
+* SmartHealthCard [https://github.com/smart-crvs/cr-cards](https://github.com/smart-crvs/cr-cards)
+* ACSA Standard: [https://acsa.afrika/standard](https://acsa.afrika/standard/)
 * DEFLATE Compression: [https://tools.ietf.org/html/rfc1951](https://tools.ietf.org/html/rfc1951)
 * JSON Web Token (JWT): [https://tools.ietf.org/html/rfc7519](https://tools.ietf.org/html/rfc7519)
 * JSON Web Key (JWK): [https://tools.ietf.org/html/rfc7517](https://tools.ietf.org/html/rfc7517)

@@ -3,7 +3,7 @@ Id: ACSA
 Title: "Acsa Data dictionary"
 Description: "Acsa main Data dictionary that defines the required concepts"
 
-* ^url =  "http://acsa.africa/fhir/CodeSystem/acsa"
+* ^url =  "http://acsa.africa/standard/CodeSystem/acsa"
 * #place-type "Place Type" "Category for birth place types"
   * #home "Home"
   * #dispensary "Dispensary"

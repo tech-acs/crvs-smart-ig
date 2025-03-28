@@ -1,76 +1,56 @@
 # Digital Principle and Data Standard for CRVS Systems
 
-This implementation guideline was drafted following a workshop organized in Kigali in February 2025.
+THIS IS AN EXAMPLE OF L3 containing L2 information 
+
+THIS IS NOT FHIR, it only use the same tooling which are efficient
+
+It was drafted following a workshop organized in Kigali in February 2025 and looking at the DCI standard.
+
+
+## Context 
 
 The African e-CRVS Shared Asset (ACSA) initiative aims at putting in place guidance for integrated and harmonized digital Civil Registration and Vital Statistics (e-CRVS) system that will accelerate civil registration in Africa.
-
 The ACSA initiative is led by a Board of African countries with the support three development partners namely UNICEF, UNECA and Vital Strategies.
 
-## Introduction
+
 Civil Registration and Vital Statistics (CRVS) systems record vital events—births, deaths, marriages, and other legally recognized events—providing individuals with legal identity and governments with essential data for planning and policy-making. Digitalization enhances the efficiency, accuracy, and accessibility of these systems, aligning them with modern governance needs. These *Design Principles and Data Standards* offers a comprehensive, standardized framework for designing and implementing digital CRVS systems, balancing international best practices with national contexts.
 
 **Purpose**: To guide stakeholders in creating inclusive, secure, and sustainable digital CRVS solutions that meet the core principles of civil registration—compulsoriness, universality, continuity and permanence, and confidentiality—while addressing functional and operational requirements.
 
-## Principles for Digitalization
-These principles ensure digital CRVS systems align with United Nations standards (UNSD, 2014) and address inclusivity, security, and sustainability, as emphasized in Workshop Group 1 feedback.
+## Principles and Data standard
 
-- **Compulsory**
-  - **Legal Compliance**: Systems must adhere to national laws (e.g., civil registration, ICT, privacy, data protection) and international frameworks (e.g., UN treaties), ensuring digitally issued documents are legally recognized.
-  - **Free Access**: Registration and the first certificate must be free, with fees limited to additional services like duplicate certificates.
-  - **Data Quality Assurance**: Embed tools to monitor timeliness (current, late, delayed), accuracy, and completeness, supporting reliable vital statistics.
+[Link to Principles and Data standard Page](./principles)
 
-- **Universality**
-  - **Inclusivity and Accessibility**: Design systems to serve all populations, including rural and vulnerable groups, with mobile and multi-language support (Workshop Group 1).
-  - **Equitable Digital Access**: Ensure fairness across geographic and socioeconomic divides, preventing a digital divide.
-  - **User-Centric Design**: Prioritize user needs to avoid marginalization, incorporating intuitive interfaces and accessible channels.
+The principles page shows the principles of CRVS IT systems and different standard that might be required to follow for a successful implementation
 
-- **Continuous and Permanent**
-  - **Legal Recognition**: (Digital) Certificates must hold legal validity under national and international law.
-  - **Resilience and Continuity**: Build systems to withstand disruptions (natural or human-induced) with robust disaster recovery plans.
-  - **Sustainability and Scalability**: Ensure long-term viability through cost-effective scaling and sustainable technical, financial, and administrative plans.
-  - **Country Ownership and Data Sovereignty**: Governments must control systems and data, using open standards to avoid vendor lock-in.
-  - **Flexibility and Adaptability**: Enable systems to evolve with technological and national changes.
 
-- **Confidentiality and Security**
-  - **Data Protection and Privacy**: Implement encryption and comply with laws like GDPR or national equivalents, safeguarding personal data (Workshop Group 1).
-  - **Promote Data Use and Interoperability**: Facilitate secure data sharing across sectors (e.g., health, ID systems) using open standards (Workshop Group 1).
-  - **Alignment with National Context**: Leverage existing infrastructure and skillsets, adopting gradual scale-up strategies.
-
-## Standards
-Standards ensure consistency, security, and interoperability, harmonization and best practices.
-
-- **Legal Framework and Governance**
-  - Align with national ICT and data protection laws, defining minimum hardware specifications for reliability.
-- **Data Standards**
-  - Use UNSD-recommended data fields for vital events (birth, death, etc.), ensuring comprehensive capture (UNSD, 2014).
-- **Security and Privacy**
-  - Adhere to ISO 27001 for cybersecurity, with regular audits and backup policies (Workshop Group 1).
-- **Interoperability**
-  - Employ open standards (e.g., OData, XML) for data exchange with systems like national ID or health databases (Workshop Group 2).
-- **International Standards**
-  - Comply with global frameworks for consistency and cross-border data sharing.
 
 ## Requirements:
 
-[Link to Reauiremetn Page](./requirements)
+[Link to Requirement Page](./requirements)
+
+The Requirement page list the different requirement that could be asked for a CRVS IT systems
+
+[Link to Checklist Page](./checklist)
+
+The checklist page is another presentation of the requirement aiming to help implementer tracking their requirement fulfillment status
+
 
 ## CRVS process
-This outlines the process from event occurrence to generating the permanent legal record of the event and to certification.
-
-- **Notifications**: Initial reports from external sources (e.g., health facilities, local authorities), contributing to but not completing registration.
-- **Declaration**: Official submission by informants, verified for accuracy.
-- **Validation**: Clerks ensure data completeness, requesting corrections if needed.
-- **Registration**: Registrars formally record the event, including assignment of a unique IDs (e.g., by the civil registry, the ID agency, the population register or any other actor in the local ID ecosystem).
-- **Certification**: Issuance of certificates as proof of registration, using special paper or digital signatures.
 
 [Link to Process Page](./process)
 
+The process page explain the expected condition when various resource define in the site are used and for which purpose
+
 ## CRVS Events
 
+The current focus is on 
 - **Live Birth**: Complete expulsion of a live infant, registered regardless of survival (WHO, 2010).
+- **Marriage**: Legal union recognized by national laws, including registered partnerships where applicable.
+
+Later on other CRVS event could be worked on
 - **Death**: Permanent cessation of life post-birth, excluding foetal deaths (WHO, 2010).
 - **Foetal Death**: Death before expulsion, distinguished from live births (WHO, 2010).
-- **Marriage**: Legal union recognized by national laws, including registered partnerships where applicable.
 - **Ruling**: Includes:
   - **Divorce**: Legal dissolution of marriage.
   - **Annulment**: Voiding of marriage.
@@ -80,11 +60,6 @@ This outlines the process from event occurrence to generating the permanent lega
   - **Recognition**: Acknowledgment of paternity.
 
 
-## Best Practices and Recommendations.
-
-- **Harmonization**: Align systems across regions using shared standards and APIs (e.g., Benin’s interoperability model).
-- **Evaluation**: Regularly assess performance and efficiency, adopting best practices from member countries.
-- **Case Studies**: Highlight successes like Rwanda’s pre-reform birth registration (UNICEF, 2017).
 
 ## References
 - UN Statistics Division. (2014). *Principles and Recommendations for a Vital Statistics System*. [Link](https://unstats.un.org/unsd/demographic/standmeth/principles/m19rev3en.pdf)
@@ -92,16 +67,7 @@ This outlines the process from event occurrence to generating the permanent lega
 - UNICEF. (2017). *Strengthening Birth Registration in Africa*. [Link](https://www.unicef.org/reports)
 - BMJ Global Health. (2018). *The ‘Ten CRVS Milestones’ Framework*. [Link](https://gh.bmj.com/content/bmjgh/3/2/e000673.full.pdf)
 
-## Process Management
-draft
 
-- **CRVS Case**: Tracks individual cases through the registration process.
-- **CRVS Task**: Assigns and monitors specific workflow steps.
-- **Person**: Identifies individuals in the system.
-- **Practitioner**: Defines user roles with authentication and authorization.
-- **Group**: Assigns tasks to teams.
-- **Location**: Records geographical data for events and organizations.
-- **Organisation**: Identifies authorities involved in CRVS processes.
 
 ## Credits
 - **ACSA Workshop Participants**: reports from Groups 1 and 2.

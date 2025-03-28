@@ -3,7 +3,7 @@ Id: Individual
 Title: "Individual Person"
 Parent: DomainResource
 Description: "A custom resource representing a person in the context of Civil Registration and Vital Statistics (CRVS) systems."
-* ^url = "http://acsa.africa/fhir/StructureDefinition/Individual"
+* ^url = "http://acsa.africa/standard/StructureDefinition/Individual"
 * ^kind = #resource
 * ^derivation = #specialization
 * ^abstract = false
