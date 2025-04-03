@@ -57,6 +57,10 @@ jobs:
         with:
           # Run the publisher - don't run the batch script but run the line directly
           args: java -Xms1g -Xmx8g -jar ./input-cache/publisher.jar publisher -ig .
+      # remove FHIR references in the artifacts page
+      - name: Replace FHIR with ACSA STD in output/artifacts.html
+        run: sed -i 's/ FHIR/ ACSA STD/g' ./output/artifacts.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
