@@ -1,0 +1,10 @@
+RuleSet: PlaceRules(path)
+* {path}.use 0..1 code "home | work | temp | old | billing - purpose of this address"
+* {path}.type 0..1 code "postal | physical | both - the type of address"
+* {path}.line 0..* string "Street name, number, direction & P.O. Box etc."
+* {path}.city 0..1 string "Name of city, town etc."
+* {path}.neighborhood 0..1 string "Name of neighborhood, block"
+* {path}.postalCode 0..1 string "Postal code for area"
+* {path}.location[x] 1..1 Coding or Reference(http://hl7.org/fhir/StructureDefinition/Location) or string "Know location in the digital ecosystem, country to district of health facility"
+* {path}.period 0..1 Period "Time period when address was/is in use"
+* {path}.text 0..1 string "Text representation of the address"

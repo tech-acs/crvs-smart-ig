@@ -3,4 +3,4 @@ ValueSet: LiteracyStatus
 Id: literacy-status
 Title: "Literacy Status Value Set"
 Description: "A custom value set for categorizing literacy status."
-* include codes from system http://acsa.africa/standard/CodeSystem/acsa where concept descendent-of #literacy
+* include codes from system https://acsa.africa/std/CodeSystem/acsa where concept descendent-of #literacy

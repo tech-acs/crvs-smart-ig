@@ -1,7 +1,7 @@
 RuleSet: BirthStatisticsSnippet
 // birth details
 * gestationalAge 0..1 Duration "Gestational age at birth"
-* attendanceOfBirth 0..* Reference(http://acsa.africa/standard/StructureDefinition/Individual) "person present during the delivery" 
+* attendanceOfBirth 0..* Reference(https://acsa.africa/std/StructureDefinition/Individual) "person present during the delivery" 
 * birthType 1..1 code "Type of birth (live or stillborn)"
 * birthType from BirthType (required)
 * previousLiveBirthDate 0..1 date "date of the last live birth"

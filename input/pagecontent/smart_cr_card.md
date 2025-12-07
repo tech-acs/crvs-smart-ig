@@ -421,7 +421,7 @@ from all of the supplied Valuesets (logical AND).
 }
 ```
 
-* **`_since`**. By default, the issuer will return CR cards of any age. If the CR Wallet wants to request only cards pertaining to data since a specific point in time, it can provide a `_since` parameter with a `valueDateTime` (which is an ISO8601 string at the level of a year, month, day, or specific time of day using the extended time format; see [ACSA STD dateTime datatype](http:/acsa.afrika/fhir/datatypes.html#dateTime) for details). For example, to request only COVID-19 data since March 2021:
+* **`_since`**. By default, the issuer will return CR cards of any age. If the CR Wallet wants to request only cards pertaining to data since a specific point in time, it can provide a `_since` parameter with a `valueDateTime` (which is an ISO8601 string at the level of a year, month, day, or specific time of day using the extended time format; see [ACSA STD dateTime datatype](http:/acsa.africa/fhir/datatypes.html#dateTime) for details). For example, to request only COVID-19 data since March 2021:
 
 
 ```json
@@ -595,7 +595,7 @@ Decision-making often results in a narrowly-scoped "Pass" that embodies conclusi
 
 The following tools are helpful to validate CR card artifacts:
 
-* The [ACSA STD Validator](https://acsa.afrika/display/FHIR/Using+the+FHIR+Validator) can be used to validate the CR card's ACSA STD bundle
+* The [ACSA STD Validator](https://acsa.africa/display/FHIR/Using+the+FHIR+Validator) can be used to validate the CR card's ACSA STD bundle
 * The [CR cards Dev Tools](https://github.com/smart-crvs/cr-cards-dev-tools) can be used to validate the various CR card artifacts.
 
 Other resources that are helpful for learning about and implementing SMART CR cards include:
@@ -616,7 +616,7 @@ The spec is currently focused on representing CR cards in a standardized data pa
 # References
 
 * SmartHealthCard [https://github.com/smart-crvs/cr-cards](https://github.com/smart-crvs/cr-cards)
-* ACSA Standard: [https://acsa.afrika/standard](https://acsa.afrika/standard/)
+* ACSA Standard: [https://acsa.africa/std](https://acsa.africa/std/)
 * DEFLATE Compression: [https://tools.ietf.org/html/rfc1951](https://tools.ietf.org/html/rfc1951)
 * JSON Web Token (JWT): [https://tools.ietf.org/html/rfc7519](https://tools.ietf.org/html/rfc7519)
 * JSON Web Key (JWK): [https://tools.ietf.org/html/rfc7517](https://tools.ietf.org/html/rfc7517)

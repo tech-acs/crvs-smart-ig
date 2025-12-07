@@ -1,12 +1,12 @@
 RuleSet: BasicPersonSnippet
 * dateOfBirth 1..1 date "Date of birth"
-* placeOfBirth[x] 0..1 Coding or Reference(http://hl7.org/fhir/StructureDefinition/Location) or Address "Country of birth of the person "
-* placeOfBirth[x] from http://hl7.org/fhir/ValueSet/country (extensible)
-
-* mother 1..1 Reference(http://acsa.africa/standard/StructureDefinition/Individual) "Mother of the child"
-* father 0..1 Reference(http://acsa.africa/standard/StructureDefinition/Individual) "Father of the child"
+* placeOfBirth 0..1 BackboneElement "place of birth of the person "
+* insert PlaceRules(placeOfBirth)
+* mother 0..1 Reference(https://acsa.africa/std/StructureDefinition/Individual) "Mother of the child"
+* father 0..1 Reference(https://acsa.africa/std/StructureDefinition/Individual) "Father of the child"
 * name 0..1 HumanName "Name of the child"
 * sex 1..1 code "Sex of the child"
 * sex from Sex (required)
-
-
+* ethnicity 0..1  Coding "Ethnicity"
+* nationality 0..* Coding "Nationalities"
+* nationality from http://hl7.org/fhir/ValueSet/country (extensible)

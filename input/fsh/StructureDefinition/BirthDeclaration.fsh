@@ -5,11 +5,11 @@ Parent: Resource
 Description: "A new base resource for capturing registered birth data in the CRVS realm."
 * ^kind = #resource
 * ^derivation = #specialization
-* ^url = "http://acsa.africa/standard/StructureDefinition/BirthDeclaration"
+* ^url = "https://acsa.africa/std/StructureDefinition/BirthDeclaration"
 * ^abstract = false
 * insert BasicPersonSnippet
 * insert BirthNotificationSnippet
 * insert RegisteredBirthSnippet
+* eventNote 0..1 string "Free text note about the birth event"
 * statistic 0..1 BackboneElement "Mother's occupation details"
-* statistic only http://acsa.africa/standard/StructureDefinition/BirthStatisticBackbone
-
+* insert BirthStatisticRules(statistic)

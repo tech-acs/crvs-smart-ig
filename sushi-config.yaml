@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: crvs.ig
-canonical: http://acsa.afrika/standard
+canonical: https://acsa.africa/std
 name: CRVS-IG
 title: Example CRVS Implementation Guide
 description: Example Implementation Guide for CRVS data capture
@@ -16,8 +16,8 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: SwissTPH
-  url: https://swisstph-mic.ch
+  name: ACSA
+  url: https://acsa.africa
   # email: test@example.org
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
@@ -194,8 +194,8 @@ menu:
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.
 # The default value for this property is false.
-#
-# FSHOnly: false
+
+# FSHOnly: true
 #
 #
 # When set to true, the "short" and "definition" field on the root element of an Extension will

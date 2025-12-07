@@ -6,3 +6,4 @@ Thumbs.db
 /temp
 /template
 *.docx
+/node_modules

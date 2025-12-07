@@ -283,10 +283,10 @@
             <valueString value="StructureDefinition:logical"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-OccupationBackbone.html"/>
+            <valueUri value="StructureDefinition-Occupation.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/OccupationBackbone"/>
+            <reference value="StructureDefinition/Occupation"/>
          </reference>
          <name value="Occupation Profile"/>
          <description value="A profile defining occupation details."/>
@@ -355,10 +355,10 @@
             <valueString value="StructureDefinition:logical"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ParentDetailBackbone.html"/>
+            <valueUri value="StructureDefinition-ParentDetail.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/ParentDetailBackbone"/>
+            <reference value="StructureDefinition/ParentDetail"/>
          </reference>
          <name value="Statistic Profile"/>
          <description value="A profile defining statistical details."/>
@@ -373,10 +373,10 @@
             <valueString value="StructureDefinition:logical"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-PlaceBackbone.html"/>
+            <valueUri value="StructureDefinition-Place.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/PlaceBackbone"/>
+            <reference value="StructureDefinition/Place"/>
          </reference>
          <name value="Statistic Profile"/>
          <description value="A profile defining place ."/>
@@ -391,10 +391,10 @@
             <valueString value="StructureDefinition:logical"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-BirthStatisticBackbone.html"/>
+            <valueUri value="StructureDefinition-BirthStatistic.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/BirthStatisticBackbone"/>
+            <reference value="StructureDefinition/BirthStatistic"/>
          </reference>
          <name value="Statistic Profile"/>
          <description value="A profile defining statistical details."/>
