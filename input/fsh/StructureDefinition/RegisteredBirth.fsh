@@ -7,6 +7,9 @@ Description: "A new base resource for capturing registered birth data in the CRV
 * ^derivation = #specialization
 * ^url = "https://acsa.africa/std/StructureDefinition/RegisteredBirth"
 * ^abstract = false
+* ^status = #draft
+* ^experimental = false
+* insert BaseRegisteredEvent
+* insert BasicPersonSnippet
 * insert BirthNotificationSnippet
 * insert RegisteredBirthSnippet
-

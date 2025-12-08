@@ -7,6 +7,8 @@ Description: "A new base resource for capturing birth data in the CRVS realm."
 * ^derivation = #specialization
 * ^url = "https://acsa.africa/std/StructureDefinition/BirthNotification"
 * ^abstract = false
+* ^status = #draft
+* ^experimental = false
+* insert BaseNotification
 * insert BasicPersonSnippet
 * insert BirthNotificationSnippet
-* eventNote 0..1 string "Free text note about the birth event"

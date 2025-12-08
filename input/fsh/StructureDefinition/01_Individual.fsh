@@ -7,6 +7,8 @@ Description: "A custom resource representing a person in the context of Civil Re
 * ^kind = #resource
 * ^derivation = #specialization
 * ^abstract = false
+* ^status = #draft
+* ^experimental = true
 
 * insert BasicPersonSnippet
 * maritalStatus 0..1 code "Martial Status"

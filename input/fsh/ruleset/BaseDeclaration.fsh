@@ -1,0 +1,2 @@
+RuleSet: BaseDeclaration
+* insert BaseRegisteredEvent
